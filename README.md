@@ -1,0 +1,2 @@
+# GoogleHackingTool_modified
+GoogleHackingTool魔改版，增加了更多信息接口，适合hvv前期半自动敏感信息排查

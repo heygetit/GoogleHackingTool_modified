@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>在线多平台敏感信息收集工具</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<script type="text/javascript" src="comonjs/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="comonjs/modernizr-2.6.2.min.js"></script>
+<script type="text/javascript" src="js/starbg.js"></script>
+<script type="text/javascript" src="js/googlehack.js"></script>
+<link type="text/css" rel="stylesheet" href="css/styles.css" />
+
+</head>
+<body>
+
+<canvas id="fullstarbg">您的浏览器不支持canvas标签</canvas>
+
+<div class="content">
+ 	<center><img src="search.png" alt="google"></center>
+ 		<div class="input_wrap_box box_S">
+	 		<input id="sercHead" name="sercHead" type="text" class="box_S" value="" placeholder="example.com" onclick="">
+ 		</div>
+</div>
+
+<div class="options">
+    <div class="table-container">
+        <table class="category-table">
+            <ul>
+                <li class="list_title">GoogleHack
+                </li>
+
+                <li class="GoogleHack"><a href="#" onclick="do_google_search(1)">目录遍历漏洞</a>
+                </li>
+
+                <li class="GoogleHack"><a href="#" onclick="do_google_search(2)">配置文件泄露</a>
+                </li>
+
+                <li class="GoogleHack"><a href="#" onclick="do_google_search(3)">数据库文件泄露</a>
+                </li>
+
+                <li class="GoogleHack"><a href="#" onclick="do_google_search(4)">日志文件泄露</a>
+                </li>
+
+                <li class="GoogleHack"><a href="#" onclick="do_google_search(5)">备份和历史文件</a>
+                </li>
+
+                <li class="GoogleHack"><a href="#" onclick="do_google_search(6)">登录页面</a>
+                </li>
+
+                <li class="GoogleHack"><a href="#" onclick="do_google_search(7)">SQL错误</a>
+                </li>
+
+                <li class="GoogleHack"><a href="#" onclick="do_google_search(8)">公开文件信息</a>
+                </li>
+
+                <li class="GoogleHack"><a href="#" onclick="do_google_search(9)">phpinfo()</a>
+                </li>
+
+                <li class="GoogleHack"><a href="#" onclick="do_google_search(10)"  title="源代码、网络架构图、网络拓扑图、邮箱、密码、文件名、通讯录、内部资料、安装说明等">多关键词联合检索</a>
+                </li>
+                <li class="GoogleHack"><a href="#" onclick="do_google_search(11)">云服务器文件和文件夹共享</a>
+                </li>
+
+                <li class="GoogleHack"><a href="#" onclick="do_google_search(12)"  title="pastebin.com,paste2.org,pastehtml.com,slexy.org,snipplr.com,snipt.net,textsnip.com,bitpaste.app,justpaste.it,heypasteit.com,hastebin.com,dpaste.org,dpaste.com,codepad.org,jsitor.com,codepen.io,jsfiddle.net,dotnetfiddle.net,phpfiddle.org,ide.geeksforgeeks.org,repl.it,ideone.com,paste.debian.net,paste.org,paste.org.ru,codebeautify.org,codeshare.io,trello.com">搜索粘贴站点</a>
+                </li>
+                
+                <li class="GoogleHack"><a href="#" onclick="do_google_search(13)"  title="Github.com,Gitlab.com,Bitbucket.org,Gitee.com">搜索代码泄露</a>
+                </li>
+                <li class="批量检索"><a href="#" onclick="do_google_search(10000)" title="全部搜索结束会产生弹窗提示结束，如果没有，可能是因为其中某个页面需要验证而导致没有继续进行递归检索">批量检索</a>
+                </li>
+            </ul>
+        </table>
+
+        <!-- 待定，做到一半觉得好鸡肋 -->
+        <!-- <table class="category-table">
+            <ul>
+                <li class="list_title">百度高级检索
+                </li>
+
+                <li class="百度高级检索"><a href="#" onclick="do_VideoPlatform_search(1)">搜索pdf文件</a>
+                </li>
+
+                <li class="百度高级检索"><a href="#" onclick="do_VideoPlatform_search(2)">搜索doc,xls,ppt文件</a>
+                </li>
+
+                <li class="百度高级检索"><a href="#" onclick="do_VideoPlatform_search(3)">抖音</a>
+                </li>
+
+                <li class="百度高级检索"><a href="#" onclick="do_VideoPlatform_search(4)">优酷</a>
+                </li>
+
+                <li class="百度高级检索"><a href="#" onclick="do_VideoPlatform_search(5)">爱奇艺</a>
+                </li>
+
+                <li class="百度高级检索"><a href="#" onclick="do_VideoPlatform_search(6)">腾讯视频</a>
+                </li>
+
+                <li class="百度高级检索"><a href="#" onclick="do_VideoPlatform_search(7)">bilibili</a>
+                </li>
+
+                <li class="批量检索"><a href="#" onclick="do_VideoPlatform_search(10000)">批量检索</a>
+                </li>
+
+            </ul>
+        </table> -->
+
+        <table class="category-table">
+            <ul>
+                <li class="list_title">网盘搜索
+                </li>
+
+                <li class="网盘搜索"><a href="#" onclick="do_InternetDisk_search(1)">PanSoso</a>
+                </li>
+
+                <li class="网盘搜索"><a href="#" onclick="do_InternetDisk_search(2)">凌风云</a>
+                </li>
+
+                <li class="网盘搜索"><a href="#" onclick="do_InternetDisk_search(3)">微贴网</a>
+                </li>
+
+                <li class="网盘搜索"><a href="#" onclick="do_InternetDisk_search(4)">小白盘</a>
+                </li>
+
+                <li class="网盘搜索"><a href="#" onclick="do_InternetDisk_search(5)">fastsoso</a>
+                </li>
+
+                <li class="网盘搜索"><a href="#" onclick="do_InternetDisk_search(6)">猫狸盘搜</a>
+                </li>
+
+                <li class="网盘搜索"><a href="#" onclick="do_InternetDisk_search(7)">毕方铺</a>
+                </li>
+
+                <li class="网盘搜索"><a href="#" onclick="do_InternetDisk_search(8)">UP云搜</a>
+                </li>
+
+                <li class="网盘搜索"><a href="#" onclick="do_InternetDisk_search(9)">小云搜索</a>
+                </li>
+
+                <li class="网盘搜索"><a href="#" onclick="do_InternetDisk_search(10)">大圣盘</a>
+                </li>
+
+                <li class="网盘搜索"><a href="#" onclick="do_InternetDisk_search(11)">小马</a>
+                </li>
+
+                <li class="批量检索"><a href="#" onclick="do_InternetDisk_search(10000)" title="使用域名搜索效果差">批量检索</a>
+                </li>
+
+            </ul>
+        </table>
+
+        <table class="category-table">
+            <ul>
+                <li class="list_title">视频平台检索
+                </li>
+
+                <li class="视频平台检索"><a href="#" onclick="do_VideoPlatform_search(1)">芒果TV</a>
+                </li>
+
+                <li class="视频平台检索"><a href="#" onclick="do_VideoPlatform_search(2)">西瓜视频</a>
+                </li>
+
+                <li class="视频平台检索"><a href="#" onclick="do_VideoPlatform_search(3)">抖音</a>
+                </li>
+
+                <li class="视频平台检索"><a href="#" onclick="do_VideoPlatform_search(4)">优酷</a>
+                </li>
+
+                <li class="视频平台检索"><a href="#" onclick="do_VideoPlatform_search(5)">爱奇艺</a>
+                </li>
+
+                <li class="视频平台检索"><a href="#" onclick="do_VideoPlatform_search(6)">腾讯视频</a>
+                </li>
+
+                <li class="视频平台检索"><a href="#" onclick="do_VideoPlatform_search(7)">bilibili</a>
+                </li>
+
+                <li class="视频平台检索"><a href="#" onclick="do_VideoPlatform_search(8)">咪咕视频</a>
+                </li>
+
+                <li class="批量检索"><a href="#" onclick="do_VideoPlatform_search(10000)">批量检索</a>
+                </li>
+
+            </ul>
+        </table>
+
+        <table class="category-table">
+            <ul>
+                <li class="list_title">文档平台检索
+                </li>
+
+                <li class="文档平台检索"><a href="#" onclick="do_DocumentPlatform_search(1)">原创力文档</a>
+                </li>
+
+                <li class="文档平台检索"><a href="#" onclick="do_DocumentPlatform_search(2)">百度文库</a>
+                </li>
+
+                <li class="文档平台检索"><a href="#" onclick="do_DocumentPlatform_search(3)">道客巴巴</a>
+                </li>
+
+                <li class="文档平台检索"><a href="#" onclick="do_DocumentPlatform_search(4)">豆丁网</a>
+                </li>
+
+                <li class="文档平台检索"><a href="#" onclick="do_DocumentPlatform_search(5)">人人文库</a>
+                </li>
+
+                <li class="文档平台检索"><a href="#" onclick="do_DocumentPlatform_search(6)">CSDN</a>
+                </li>
+
+                <li class="文档平台检索"><a href="#" onclick="do_DocumentPlatform_search(7)">蚂蚁文库</a>
+                </li>
+                
+                <li class="文档平台检索"><a href="#" onclick="do_DocumentPlatform_search(8)">淘豆网</a>
+                </li>
+
+                <!-- <li class="文档平台检索"><a href="#" onclick="do_DocumentPlatform_search(9)">文档之家</a> //失效
+                </li> -->
+
+                <li class="文档平台检索"><a href="#" onclick="do_DocumentPlatform_search(9)">点石文库网</a>
+                </li>
+
+                <li class="文档平台检索"><a href="#" onclick="do_DocumentPlatform_search(10)" title="需要搭配多个关键词检索">语雀公开文档(需登录)</a>
+                </li>
+
+                <li class="文档平台检索"><a href="#" onclick="do_DocumentPlatform_search(11)" title="可搜索拓扑图纸等">装配图网</a>
+                </li>
+
+                <li class="批量检索"><a href="#" onclick="do_DocumentPlatform_search(10000)">批量检索</a>
+                </li>
+
+            </ul>
+        </table>
+        
+        <table class="category-table">
+            <ul>
+                <li class="list_title">社交平台检索
+                </li>
+
+                <li class="社交平台检索"><a href="#" onclick="do_SocialPlatform_search(1)">微信文章检索</a> 
+                </li>
+
+                <li class="社交平台检索"><a href="#" onclick="do_SocialPlatform_search(2)">微信公众号检索</a>
+                </li>
+
+                <li class="社交平台检索"><a href="#" onclick="do_SocialPlatform_search(3)" title="需登录">百度贴吧检索</a>
+                </li>
+
+                <li class="社交平台检索"><a href="#" onclick="do_SocialPlatform_search(4)">微博搜索</a>
+                </li>
+
+                <!-- <li class="社交平台检索"><a href="#" onclick="do_SocialPlatform_search(5)">qq</a>
+                </li> -->
+
+                <li class="批量检索"><a href="#" onclick="do_SocialPlatform_search(5)">批量检索</a>
+                </li>
+
+            </ul>
+        </table>
+    </div>
+    <ul>
+
+    </ul>
+</div>
+
+<div class="footer">
+	<center> Copyright © 2019 CODING BY <a href="https://www.se7ensec.cn" style="font-family:verdana;color:#4285f4;text-decoration:none"> SE7EN </a> GIT HUB: <a href="https://github.com/r00tSe7en/GoogleHackingTool" style="font-family:verdana;color:#4285f4;text-decoration:none"> 在线敏感信息搜索小工具(半自动)</a></center>
+</div>
+
+</body>
+</html>

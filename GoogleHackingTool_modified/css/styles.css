@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+.table-container.center table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.list_title {
+  font-family: verdana;
+  font-size: 35px;
+  color: #d4eff3;
+  text-decoration: none;
+  font-weight:bolder;
+  list-style: none;
+  
+}
+
+.category-table {
+  flex: 1;
+}
+
+.批量检索{
+  list-style: none;
+}
+
+.GoogleHack {
+  list-style: none;
+}
+
+.批量检索 a{
+  font-family: verdana;
+  font-size: 25px;
+  color: #9fa4b4;
+  text-decoration: none;
+}
+
+.GoogleHack {
+  list-style: none;
+}
+
+.GoogleHack a {
+  font-family: verdana;
+  font-size: 20px;
+  color: #85c0f1;
+  text-decoration: none;
+}
+
+.网盘搜索 {
+  list-style: none;
+}
+
+.网盘搜索 a {
+  font-family: verdana;
+  font-size: 20px;
+  color: #859cf1;
+  text-decoration: none;
+}
+
+.视频平台检索 {
+  list-style: none;
+}
+
+.视频平台检索 a {
+  font-family: verdana;
+  font-size: 20px;
+  color: #8599f1;
+  text-decoration: none;
+}
+
+.文档平台检索 {
+  list-style: none;
+}
+
+.文档平台检索 a {
+  font-family: verdana;
+  font-size: 20px;
+  color: #a285f1;
+  text-decoration: none;
+}
+
+.社交平台检索 {
+  list-style: none;
+}
+
+.社交平台检索 a {
+  font-family: verdana;
+  font-size: 20px;
+  color: #c87ef0;
+  text-decoration: none;
+}
+
+body {
+  color: #ffffff;
+  font-size: 14px;
+  font-family: tahoma, "Microsoft YaHei", 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+}
+
+canvas { 
+  display: block; 
+  margin: 0; 
+  width:100%; 
+  height:100%; 
+  position: fixed; 
+  left: 0; 
+  right: 0; 
+  top:0; 
+  bottom:0;
+  z-index: -1;
+  }
+
+.box_S {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+
+.content {
+  padding-top:10%;
+  width: 100%;
+  margin: 0;
+}
+
+.input_wrap_box {
+  background: #0f1034;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  width: 770px;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.input_wrap_box #sercHead {
+  background: #0f1034;
+  width: 100%;
+  display: block;
+  text-align: center;
+  line-height: 48px;
+  border: 1px solid #1d2556;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  color: #ffffff;
+}
+
+.options {
+  width: 100%;
+  text-align: center;
+  margin-top:20px;
+}
+
+.footer {
+  width: 100%;
+  margin-top: 50px;
+}
+

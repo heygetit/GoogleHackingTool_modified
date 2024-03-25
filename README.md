@@ -5,5 +5,5 @@ GoogleHackingTool魔改版，增加了更多信息接口，适合hvv前期半自
 Chrome配置方法如下：
 设置：
 　　设置-内容设置-弹出式窗口
+![image](https://github.com/heygetit/GoogleHackingTool_modified/assets/32674342/6358d9b1-4adb-408c-ace2-265f5ed96dc9)
 
-![image](https://github.com/heygetit/GoogleHackingTool_modified/assets/32674342/2f6e9817-f1a4-42a5-b173-778ab70270a1)
